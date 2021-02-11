@@ -90,10 +90,10 @@ const deletePaciente = key =>{
                       <td>{dadosPacientes[id].telefone}</td>
                       <td>{dadosPacientes[id].email}</td>
                       <td>
-                        <a className="btn btn-primary" onClick={ ()=> setIdAtual(id)} >
+                        <a href="/" className="btn btn-primary" onClick={ ()=> setIdAtual(id)} >
                             <i className="fas fa-pencil-alt"></i>
                         </a>
-                        <a className="btn btn-danger" onClick={ ()=> deletePaciente(id)}>
+                        <a  href="/" className="btn btn-danger" onClick={ ()=> deletePaciente(id)}>
                             <i className="fas fa-trash-alt"></i>
                         </a>
                       </td>

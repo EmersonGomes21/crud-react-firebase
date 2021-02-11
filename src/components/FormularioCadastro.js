@@ -7,7 +7,7 @@ const FormularioCadastro = (props) => {
     telefone: '',
     email: '',
     endereco: ''
-  };
+  }
 
   let [values, setValues] = useState(camposIniciaisDeValores);
 
@@ -23,7 +23,7 @@ const FormularioCadastro = (props) => {
 
     }
 
-  }, [props.idAtual, props.dadosPacientes, camposIniciaisDeValores]);
+  }, [props.idAtual, props.dadosPacientes])
 
   const InputChange = e => {
     let { name, value } = e.target
