@@ -9,22 +9,22 @@ const FormularioCadastro = (props) => {
     endereco: ''
   };
 
-  let [ values, setValues ] = useState(camposIniciaisDeValores);
+  let [values, setValues] = useState(camposIniciaisDeValores);
 
-   useEffect(() =>{
-     if(props.idAtual === ''){
-       setValues({
-         ...camposIniciaisDeValores
-       })
-     }else{
-       setValues({
-         ...props.dadosPacientes[props.idAtual]
-       })
+  useEffect(() => {
+    if (props.idAtual === '') {
+      setValues({
+        ...camposIniciaisDeValores
+      })
+    } else {
+      setValues({
+        ...props.dadosPacientes[props.idAtual]
+      })
 
-     }
+    }
 
-   }, [props.idAtual, props.dadosPacientes ]);
-  
+  }, [props.idAtual, props.dadosPacientes, camposIniciaisDeValores]);
+
   const InputChange = e => {
     let { name, value } = e.target
 
@@ -75,14 +75,14 @@ const FormularioCadastro = (props) => {
       </div>
 
       <div className="form-group ">
-           <textarea className="form-control"
-            name="endereco" value={values.endereco} onChange={InputChange} placeholder="endereço" >
-           </textarea> 
-        </div>
-         
-          <div className="form-group">
-            <input type="submit" value={props.idAtual === '' ? 'Salvar' : 'Atualizar'} className="btn btn-primary btn-block" />
-          </div>
+        <textarea className="form-control"
+          name="endereco" value={values.endereco} onChange={InputChange} placeholder="endereço" >
+        </textarea>
+      </div>
+
+      <div className="form-group">
+        <input type="submit" value={props.idAtual === '' ? 'Salvar' : 'Atualizar'} className="btn btn-primary btn-block" />
+      </div>
 
     </form>
   );
