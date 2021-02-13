@@ -47,7 +47,7 @@ const FormularioCadastro = (props) => {
           </div>
         </div>
 
-        <input type="text" className="form-control" placeholder="Nome Completo" name="nomeCompleto" value={values.nomeCompleto} onChange={InputChange} />
+        <input type="text" className="form-control" placeholder="Nome Completo" name="nomeCompleto" value={values.nomeCompleto} onChange={InputChange} required />
       </div>
 
       <div className="row">
@@ -58,7 +58,7 @@ const FormularioCadastro = (props) => {
             </div>
           </div>
 
-          <input type="text" className="form-control" placeholder="Telefone" name="telefone" value={values.telefone} onChange={InputChange} />
+          <input type="text" className="form-control" placeholder="Telefone" name="telefone" value={values.telefone} onChange={InputChange} required />
         </div>
 
 
@@ -69,14 +69,14 @@ const FormularioCadastro = (props) => {
             </div>
           </div>
 
-          <input type="text" className="form-control" placeholder="Seu melhor email" name="email" value={values.email} onChange={InputChange} />
+          <input type="text" className="form-control" placeholder="Seu melhor email" name="email" value={values.email} onChange={InputChange} required />
         </div>
 
       </div>
 
       <div className="form-group ">
         <textarea className="form-control"
-          name="endereco" value={values.endereco} onChange={InputChange} placeholder="endereço" >
+          name="endereco" value={values.endereco} onChange={InputChange} placeholder="endereço" required>
         </textarea>
       </div>
 

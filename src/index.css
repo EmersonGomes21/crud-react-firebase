@@ -11,3 +11,33 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* css global,reset bootstrap */
+.btn-primary {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+
+  margin: 0px 10px;
+}
+
+.btn {
+
+  line-height: 1.5;
+}
+
+.input-group {
+  align-items: center;
+
+}
+
+.input-group-text {
+  align-items: center;
+  margin-right: 7px;
+}
+
+.input-group > .form-control{
+  height: 30px;
+  padding: 15px;
+  font-size: 12px;
+}
